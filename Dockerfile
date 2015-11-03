@@ -3,10 +3,10 @@ FROM octohost/php5
 ENV APT_PROXY http://192.168.1.10:3128
 
 RUN echo "\n\
-Acquire::HTTP::Proxy \"$APT_PROXY\";\n\
-Acquire::HTTPS::Proxy \"$APT_PROXY\";\n\
-" > /etc/apt/apt.conf.d/01proxy && \
-apt-get update && \
+	Acquire::HTTP::Proxy \"$APT_PROXY\";\n\
+	Acquire::HTTPS::Proxy \"$APT_PROXY\";\n\
+	" > /etc/apt/apt.conf.d/01proxy && \
+	apt-get update && \
     apt-get -yq install php5-dev php-pear build-essential && \
     pecl install mongo
 
