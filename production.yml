@@ -1,8 +1,8 @@
-nginx:
+dbclient:
   extends:
     file: base.yml
-    service: nginx
+    service: dbclient
   volumes:
-    - /srv/www:/usr/share/nginx/html
+    - /srv/db-client:/usr/share/nginx/html
   ports:
     - 8090:80
