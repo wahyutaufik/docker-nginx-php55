@@ -10,7 +10,7 @@ RUN echo "\n\
     apt-get -yq install php5-dev php-pear build-essential && \
     pecl install mongo
 
-#ADD ./php.ini /etc/php5/fpm/
+ADD ./php.ini /etc/php5/fpm/
 #ADD ./default /etc/nginx/sites-available/default
 #ADD ./index.php /srv/www/
 
