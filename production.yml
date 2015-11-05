@@ -3,6 +3,6 @@ nginx:
     file: base.yml
     service: nginx
   volumes:
-    - /srv/www:/srv/www
+    - /srv/www:/usr/share/nginx/html
   ports:
-    - 80:80
+    - 8090:80
