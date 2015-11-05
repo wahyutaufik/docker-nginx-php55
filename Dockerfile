@@ -7,7 +7,7 @@ RUN echo "\n\
 	Acquire::HTTPS::Proxy \"$APT_PROXY\";\n\
 	" > /etc/apt/apt.conf.d/01proxy && \
 	apt-get update && \
-    apt-get -yq install php5-dev php-pear build-essential && \
+    apt-get -yq install php5-dev php-pear build-essential make && \
     pecl install mongo
 
 ADD ./php.ini /etc/php5/fpm/
