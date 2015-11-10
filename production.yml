@@ -1,8 +1,0 @@
-nginx:
-  extends:
-    file: base.yml
-    service: nginx
-  volumes:
-    - /srv/www:/usr/share/nginx/html
-  ports:
-    - 8090:80
