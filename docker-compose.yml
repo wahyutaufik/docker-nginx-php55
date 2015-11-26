@@ -1,8 +1,8 @@
-dbclient:
+nginxphp5:
   extends:
     file: base.yml
-    service: dbclient
+    service: docker
   volumes:
     - ./srv/www:/usr/share/nginx/html
   ports:
-    - 8090:80
+    - 8080:80
